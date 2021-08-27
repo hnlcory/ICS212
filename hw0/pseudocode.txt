@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-*** Assume the following variables are already defined. ***
+*c** Assume the following variables are already defined. *c**
 
 - numbers: array of int
 - n: the size of the integer array (numbers)
