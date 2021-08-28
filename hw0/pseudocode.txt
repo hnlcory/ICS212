@@ -16,17 +16,16 @@ define an int called i
 define an int called j
 define an int called temp
 
-copy from 0 to i 						//i to find pos where num belongs
-copy from m to j 						//j to iterate backwards and shift data
+copy from 0 to i 						//i to find pos where num belongs 
 
 while ( i < m )
 	if ( num > numbers[i])
-		copy from i+1 to i 				//check next value in array to see if num belongs there
+		copy from i+1 to i 				//i++ check next value in array to see if num belongs there
 
-	else //num belongs at numbers[i]
- 		copy from j to m				//iterate backwards
+	else 							//num belongs at numbers[i]
+ 		copy from m to j				//j to iterate backwards and shift data
 
-		while ( i != m ) 				//while there is still numbers to be shifted *USE J INStead of i, j colides with i so something about that
+		while ( j != i ) 				//while there is still numbers to be shifted 
 			copy from numbers[j-1] to numbers[j] 	//shift numbers[j-1] to [j] 
 			copy from j-1 to j			//j--	
 			
