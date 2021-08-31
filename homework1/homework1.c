@@ -55,6 +55,18 @@ int main(int argc, char* argv[])
         else{
             printf("!!!");
         }
+    }
+    num=0;  
+    while (num <3){
+        printf("While loop!");
+        ++num;    
+    }
+    
+    do{
+        printf("Do-while loop!");
+        num = num+1;
+    }
+    while(num<3);
 }
 
 /*****************************************************************
