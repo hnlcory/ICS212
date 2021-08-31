@@ -1,0 +1,7 @@
+Script started on Mon 30 Aug 2021 08:38:45 PM HST
+]0;corylp@uhx02:~/homework1[?1034huhx02:/home/c/corylp/homework1% exit./homework1gcc -o homework1 homework1.oansi -pedantic-errors -Wall -c homework1.c
+]0;corylp@uhx02:~/homework1uhx02:/home/c/corylp/homework1% gcc -ansi -pedantic-errors -Wall -c homework1.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K./homework1gcc -o homework1 homework1.o
+]0;corylp@uhx02:~/homework1uhx02:/home/c/corylp/homework1% gcc -o homework1 homework1.o[Kexit
+exit
+
+Script done on Mon 30 Aug 2021 08:38:55 PM HST

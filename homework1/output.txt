@@ -1,0 +1,18 @@
+Script started on Mon 30 Aug 2021 08:39:50 PM HST
+]0;corylp@uhx02:~/homework1[?1034huhx02:/home/c/corylp/homework1% exitgcc -o homework1 homework1.oansi -pedantic-errors -Wall -c homework1.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K./homework1
+Hello
+Hello
+World
+World
+!!!
+!!!
+While loop!
+While loop!
+While loop!
+Do-while loop!
+Do-while loop!
+Do-while loop!
+]0;corylp@uhx02:~/homework1uhx02:/home/c/corylp/homework1% exit
+exit
+
+Script done on Mon 30 Aug 2021 08:40:08 PM HST

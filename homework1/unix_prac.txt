@@ -1,0 +1,27 @@
+Script started on Mon 30 Aug 2021 08:41:28 PM HST
+]0;corylp@uhx02:~/homework1[?1034huhx02:/home/c/corylp/homework1% exitcd unix_pracpwd[K
+/home/c/corylp/homework1
+]0;corylp@uhx02:~/homework1uhx02:/home/c/corylp/homework1% mkdir unix_prac
+]0;corylp@uhx02:~/homework1uhx02:/home/c/corylp/homework1% [Kuhx02:/home/c/corylp/homework1% [Kuhx02:/home/c/corylp/homework1% mv [K[K[Kcp homework1 unix_prac
+]0;corylp@uhx02:~/homework1uhx02:/home/c/corylp/homework1% cd unix_prac/
+]0;corylp@uhx02:~/homework1/unix_pracuhx02:/home/c/corylp/homework1/unix_prac% mv homework1 hw1
+]0;corylp@uhx02:~/homework1/unix_pracuhx02:/home/c/corylp/homework1/unix_prac% ./hw1
+Hello
+Hello
+World
+World
+!!!
+!!!
+While loop!
+While loop!
+While loop!
+Do-while loop!
+Do-while loop!
+Do-while loop!
+]0;corylp@uhx02:~/homework1/unix_pracuhx02:/home/c/corylp/homework1/unix_prac% rm hw1
+]0;corylp@uhx02:~/homework1/unix_pracuhx02:/home/c/corylp/homework1/unix_prac% cd ..
+]0;corylp@uhx02:~/homework1uhx02:/home/c/corylp/homework1% rmdir unix_prac
+]0;corylp@uhx02:~/homework1uhx02:/home/c/corylp/homework1% exit
+exit
+
+Script done on Mon 30 Aug 2021 08:46:11 PM HST
