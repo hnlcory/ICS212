@@ -1,7 +1,5 @@
 #include <stdio.h>
 /*****************************************************************
-#include <stdio.h>
-
 //
 //  NAME:        Cory Parker
 //
@@ -16,7 +14,7 @@
 //  FILE:        Homework1.c
 //
 //  DESCRIPTION:
-//   Describe the file
+//   Replicates the output of the provided java file in C
 //
 ****************************************************************/
 
@@ -26,8 +24,8 @@
 //
 //  Function name: main
 //
-//  DESCRIPTION:   Don't forget to describe what your main
-//                 functions does.
+//  DESCRIPTION:   Prints out various words in order.
+//       
 //
 //  Parameters:    argc (int) : The number of elements in argv
 //                 argv (char*[]) : An array of arguments passed
@@ -69,18 +67,3 @@ int main(int argc, char* argv[]){
     
     return 0;   
 }
-       
-/*****************************************************************
-//
-//  Function name: foo
-//
-//  DESCRIPTION:   A template function
-//                 This function does not do anything.
-//                 Please describe your function correctly.
-//
-//  Parameters:    bar (int) : Describe the meaning
-//
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
-//
-****************************************************************/
