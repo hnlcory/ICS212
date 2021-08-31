@@ -1,3 +1,4 @@
+#include <stdio.h>
 /*****************************************************************
 #include <stdio.h>
 
@@ -19,9 +20,7 @@
 //
 ****************************************************************/
 
-*** include necessary header files for this source file ***
 
-*** if you need, you can have function prototypes here ***
 
 /*****************************************************************
 //
@@ -39,36 +38,38 @@
 //
 ****************************************************************/
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]){
+
     int num;
     int i;
 
-    for (i=0;i<6;++i){
+    for (i=0;i<6;i=i+1){
 
         if (i<2){
-            printf("Hello");
+            printf("Hello\n");
         }
         else if (i<4){
-            printf("World");
+            printf("World\n");
         }
         else{
-            printf("!!!");
+            printf("!!!\n");
         }
     }
     num=0;  
     while (num <3){
-        printf("While loop!");
-        ++num;    
+        printf("While loop!\n");
+        num = num+1;    
     }
-    
+    num=0;   
     do{
-        printf("Do-while loop!");
+        printf("Do-while loop!\n");
         num = num+1;
     }
-    while(num<3);
+    while(num < 3);
+    
+    return 0;   
 }
-
+       
 /*****************************************************************
 //
 //  Function name: foo
@@ -83,8 +84,3 @@ int main(int argc, char* argv[])
 //                 -1 : some meaning
 //
 ****************************************************************/
-
-int foo(int bar)
-{
-    ...
-}
