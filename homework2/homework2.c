@@ -119,4 +119,11 @@ int is_multiple3(inp)
 //                 -1 : some meaning
 //
 ****************************************************************/
+void print_table(inp){
+  printf("Number Multiple of 3?");
+  int i;
+  for (i=0; i<inp; i+1){
 
+  }
+
+}
