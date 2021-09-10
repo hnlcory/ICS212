@@ -1,0 +1,52 @@
+Script started on Thu 09 Sep 2021 08:22:25 PM HST
+]0;corylp@uhx02:~/homework2[?1034huhx02:/home/c/corylp/homework2% ./homework2 gcc -o homework2 homework2.o[16P./homework2 
+This is a simple program to generate s table of numbers from 0 to 
+ the maximum number given. It will also show if it is a multiple of 3.
+Enter a max number:
+0
+error, please enter valid inputEnter a max number:
+-1
+error, please enter valid inputEnter a max number:
+qwerty
+error, please enter valid inputEnter a max number:
+qwerty101
+error, please enter valid inputEnter a max number:
+5
+Number  Multiple of 3?
+     0  Yes
+     1  No
+     2  No
+     3  Yes
+     4  No
+     5  No
+]0;corylp@uhx02:~/homework2uhx02:/home/c/corylp/homework2% ./homework2 
+This is a simple program to generate s table of numbers from 0 to 
+ the maximum number given. It will also show if it is a multiple of 3.
+Enter a max number:
+15  2 20
+Number  Multiple of 3?
+     0  Yes
+     1  No
+     2  No
+     3  Yes
+     4  No
+     5  No
+     6  Yes
+     7  No
+     8  No
+     9  Yes
+    10  No
+    11  No
+    12  Yes
+    13  No
+    14  No
+    15  Yes
+    16  No
+    17  No
+    18  Yes
+    19  No
+    20  No
+]0;corylp@uhx02:~/homework2uhx02:/home/c/corylp/homework2% exit
+exit
+
+Script done on Thu 09 Sep 2021 08:23:09 PM HST

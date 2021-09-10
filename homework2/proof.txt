@@ -1,0 +1,15 @@
+Script started on Thu 09 Sep 2021 08:26:19 PM HST
+]0;corylp@uhx02:~/homework2[?1034huhx02:/home/c/corylp/homework2% exit./homework2 gcc -o homework2 homework2.oansi -pedantic-errors -Wall -c homework2.c
+]0;corylp@uhx02:~/homework2uhx02:/home/c/corylp/homework2% gcc -ansi -pedantic-errors -Wall -c homework2.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K./homework2 gcc -o homework2 homework2.o
+]0;corylp@uhx02:~/homework2uhx02:/home/c/corylp/homework2% gcc -o homework2 homework2.oansi -pedantic-errors -Wall -c homework2.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K./homework2 
+This is a simple program to generate s table of numbers from 0 to 
+ the maximum number given. It will also show if it is a multiple of 3.
+Enter a max number:
+1
+Number  Multiple of 3?
+     0  Yes
+     1  No
+]0;corylp@uhx02:~/homework2uhx02:/home/c/corylp/homework2% exit
+exit
+
+Script done on Thu 09 Sep 2021 08:26:38 PM HST
