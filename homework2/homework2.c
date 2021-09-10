@@ -16,7 +16,13 @@
 //   Describe the file
 //
 ****************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
 
+int userInterface(void);
+void print_table(int);
+int is_multiple3(int);
+int clean_stdin();
 /*****************************************************************
 //
 //  Function name: main
@@ -32,14 +38,10 @@
 //                 -1 : some meaning
 //
 ****************************************************************/
-#include <stdio.h>
-
-int userInterface(void);
-int is_multiple3(int);
 
 int main(int argc, char* argv[])
 {
-  userInterface();
+  print_table(userInterface());
   return 0;
 }
 
@@ -61,7 +63,7 @@ int main(int argc, char* argv[])
 int userInterface(void)
 {
   int valid;
-  int  input;
+  int input;
   printf("This is a simple program to generate s table of numbers from 0 to \n the maximum number given. It will also show if it is a multiple of 3.\n"); 
   valid=0;
 
@@ -70,17 +72,36 @@ int userInterface(void)
     valid = scanf("%d", &input);
 
     if (valid<1 || input <= 0){
+      clean_stdin();
       printf("error, please enter valid input");
       valid=0;
     }
-    else{
-      printf("valid");
-    }
+ 
   }
     
+   return input; 
+}
 
-  printf("%d",input); /* test */
-  return input; 
+
+/*****************************************************************
+//
+//  Function name: clean_stdin
+//
+//  DESCRIPTION:   A template function
+//                 This function does not do anything.
+//                 Please describe your function correctly.
+//
+//  Parameters:    bar (int) : Describe the meaning
+//
+//  Return values:  0 : some meaning
+//                 -1 : some meaning
+//
+****************************************************************/
+
+int clean_stdin()
+{
+    while (getchar()!='\n');
+    return 1;
 }
 
 /*******************************************************************
@@ -97,7 +118,7 @@ int userInterface(void)
 //                 -1 : some meaning
 //
 *******************************************************************/
-int is_multiple3(inp)
+int is_multiple3(int inp)
 {
 
   if (inp % 3 ==0){
@@ -119,10 +140,18 @@ int is_multiple3(inp)
 //                 -1 : some meaning
 //
 ****************************************************************/
-void print_table(inp){
-  printf("Number Multiple of 3?");
+void print_table(int inp){
   int i;
-  for (i=0; i<inp; i+1){
+
+  printf("Number  Multiple of 3?\n");
+  for (i=0;i<=inp;i=i+1){
+    printf("%*i",6,i);
+    if(is_multiple3(i)==1){
+      printf("%*s\n",5,"Yes");  
+    }
+    else{
+      printf("%*s\n",4,"No");
+    }  
 
   }
 
