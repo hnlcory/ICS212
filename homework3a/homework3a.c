@@ -11,7 +11,13 @@ int main(int argc, char* argv[])
     char ca[3] = "Hi";
 
     printf("before dummy call:\n");
+
+    printf("argc  %i\n",argc);
+    /* printf("argv  %c\n",argv[]);*/
+
+
     printf("num1 %i\n",num1);
+    printf("variable num2 is at address: %p\n", (void*)&num2);
     printf("num2 %i\n",num2);
 
     printf("c1  %c\n",c1);
@@ -21,7 +27,7 @@ int main(int argc, char* argv[])
 
     printf("ca[0] %c\n",ca[0]); 
     printf("ca[1] %c\n",ca[1]);
-    printf("ca[2] %c\n",ca[2]);
+    printf("ca[2] %i\n",ca[2]);
 
 
 
@@ -44,7 +50,7 @@ void dummy(int x, char y, char* z, float w)
     w = w + 2.1;
 
 
-    printf("\npost dummp:\n");
+    printf("\npost dummy:\n");
     printf("x %i\n",x);
     printf("y %c\n",y);
     printf("w %f\n",w);
