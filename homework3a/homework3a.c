@@ -12,8 +12,11 @@ int main(int argc, char* argv[])
 
     printf("\n\nbefore dummy call:\n");
 
+    printf("variable argc  is at address: %p\n", (void*)&argc);
     printf("argc  %i\n",argc);
-    /* printf("argv  %c\n",argv[]);*/
+
+    printf("variable argv  is at address: %p\n", (void*)&argv);
+    printf("argv  %p\n",(void*)argv);
 
 
     printf("variable num1 is at address: %p\n", (void*)&num1);
@@ -53,7 +56,7 @@ void dummy(int x, char y, char* z, float w)
     printf("variable y is at address: %p\n", (void*)&y);
     printf("y %c\n",y);
     printf("variable z is at address: %p\n", (void*)&z);
-    printf("z %s\n",z);
+    printf("z %p\n",(void *)z);
     printf("variable w is at address: %p\n", (void*)&w);
     printf("w %f\n",w);
 
