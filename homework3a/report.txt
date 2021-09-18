@@ -1,0 +1,9 @@
+After capturing the trace of data as well as the addresses given to the variables I notice various 
+differences between tracing by hand vs actual memory allocation. When assigning an address by hand, we
+normally would assign in order with an assumed address with the next declared variable being assigned the 
+very next available address(ie c1 is at 6000, c2 is at 6001, etc) however in actual allocation, we generally
+follow a decending order but we do have missing spots where memory has been allocated to deallocated as the program
+runs. In my case, when c2 is declared it is 1 byte meaning the score1's address should be c2's address - 1 however
+it instead was further down meaning other data was allocated there and the next avaible address was further down in memory.
+We can also see the size of these variables such as where they start (c1 being 1 byte and in between 
+num2 and c2, ca[1] being 1 byte and in between ca[0] and ca[2].  
