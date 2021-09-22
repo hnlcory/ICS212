@@ -1,12 +1,21 @@
-struct database
-{
 
-  int addRecord (struct record **, int, char [ ],char [ ])   
+/***************************************************************************
+//
+//    NAME:         
+//    HOMEWORK:     Assignment 3b
+//    CLASS:        ICS 212
+//    INSTRUCTOR:   
+//    DATE:         Sep 21, 2021
+//    FILE:         database.h
+//    DESCRIPTION:  This is the header file for database.c
+//
+****************************************************************************/ 
+    #include "record.h"
 
-  void printAllRecords(struct record *);
+    int addRecord (struct record **, int, char [],char []);
 
-  int findRecord (struct record *, int);
+    void printAllRecords(struct record *);
 
-  int deleteRecord(struct record **, int);
+    int findRecord (struct record *, int);
 
-};
+    int deleteRecord(struct record **, int);
