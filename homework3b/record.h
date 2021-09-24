@@ -1,3 +1,21 @@
+/***************************************************************************
+//
+//    NAME:         Cory Parker
+//
+//    HOMEWORK:     3b
+//
+//    CLASS:        ICS 212
+//
+//    INSTRUCTOR:   Ravi Narayan
+//
+//    DATE:         September 20, 2021
+//
+//    FILE:         record.h
+//
+//    DESCRIPTION:  Contains the struct record
+//
+****************************************************************************/
+
 struct record
 {
     int                accountno;

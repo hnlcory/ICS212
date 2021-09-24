@@ -1,16 +1,16 @@
 /*****************************************************************
 //
-//  NAME:        Ravi Narayan
+//  NAME:        Cory Parker
 //
-//  HOMEWORK:    1
+//  HOMEWORK:    3b
 //
 //  CLASS:       ICS 212
 //
 //  INSTRUCTOR:  Ravi Narayan
 //
-//  DATE:        September 3, 2112
+//  DATE:        September 20, 2021
 //
-//  FILE:        template.c
+//  FILE:        database.c
 //
 //  DESCRIPTION:
 //   Describe the file
@@ -22,7 +22,7 @@
 
 /*****************************************************************
 //
-//  Function name: foo
+//  Function name: addRecord
 //
 //  DESCRIPTION:   A template function
 //                 This function does not do anything.
@@ -35,13 +35,14 @@
 //
 ****************************************************************/
 
-int addRecord (struct record **, int, char [ ],char [ ]){
+int addRecord (struct record **start, int accNum, char name[], char address[])
+{
 return 0;
 }
 
 /*****************************************************************
 //
-//  Function name: foo
+//  Function name: printAllRecords
 //
 //  DESCRIPTION:   A template function
 //                 This function does not do anything.
@@ -55,13 +56,14 @@ return 0;
 ****************************************************************/
 
 
-void printAllRecords(struct record *){
-
+void printAllRecords(struct record *start)
+{
+    printf("Print All Records\n");
 }
 
 /*****************************************************************
 //
-//  Function name: foo
+//  Function name: findRecord
 //
 //  DESCRIPTION:   A template function
 //                 This function does not do anything.
@@ -74,13 +76,14 @@ void printAllRecords(struct record *){
 //
 ****************************************************************/
 
-int findRecord (struct record *, int){
+int findRecord (struct record *start, int accNum)
+{
 return 0;
 }
 
 /*****************************************************************
 //
-//  Function name: foo
+//  Function name: deleteRecord
 //
 //  DESCRIPTION:   A template function
 //                 This function does not do anything.
@@ -95,7 +98,8 @@ return 0;
 ****************************************************************/
 
 
-int deleteRecord(struct record **, int){
+int deleteRecord(struct record **start, int accNum)
+{
 return 0;
 }
 
