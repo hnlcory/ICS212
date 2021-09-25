@@ -21,11 +21,12 @@
 #include <stdlib.h>
 #include "database.h"
 
+int debugMode = 0;
+
 void getaddress (char [], int);
 void menu();
 int getAccNum();
 int clean_stdin();
-
 
 /*****************************************************************
 //
@@ -45,13 +46,41 @@ int clean_stdin();
 
 int main(int argc, char* argv[])
 {
+
     struct record * start = NULL;
     int working = 0;
     char usrInp[10], accName[50], accAddr[150];
     int usrInpSize;
     int accNum = 0;
-   
-    printf("\n---  Welcome to the Parker Banking System ---\n");
+     
+    int argLen = 1;
+
+    if (argc > 2)
+    {
+        printf("\n---Too many arguments given---\n");
+        working = 1;
+    }
+    else if (argc > 1) 
+    {
+        if (strcmp(argv[argLen], "debugmode") == 0)
+        {
+             printf("deb");
+        }
+        else 
+        {
+        printf("\n---Incorrect argument given---\n");
+        working = 1;
+        }
+    }    
+    else
+    {
+    }
+
+
+    /* if arg values are debugmode, set debugMode to 1
+ *
+ *  else if thees more in argv than debug, print error, set working to 0
+ *  */   
    
     while (working != 1)
     {   
@@ -72,7 +101,6 @@ int main(int argc, char* argv[])
             fgets(accName, sizeof accName, stdin);
          /* printf("\n name stored:%s\n",accName); */
             
-            printf("\nEnter address followed by # when done:\n");
             getaddress(accAddr, sizeof accAddr);
             printf("\naddress stored:%s",accAddr);
             clean_stdin();
@@ -189,6 +217,8 @@ void getaddress(char address[], int size)
 {
     char buffInput;
     int end = 0, i = 0;
+   
+    printf("\nEnter address followed by # when done:\n");
     while (end != 1)
     {
 
@@ -223,6 +253,7 @@ void getaddress(char address[], int size)
 
 void menu()
 {
+    printf("\n---  Welcome to the Parker Banking System ---\n");
     printf("\nPlease type the name of the option you\nwould like to access:\n\n");
     printf("add: Add a new record in the database\n");
     printf("printall: Print all records in the database\n");
