@@ -25,6 +25,8 @@ void getaddress (char [], int);
 void menu();
 int getAccNum();
 int clean_stdin();
+
+
 /*****************************************************************
 //
 //  Function name: main
@@ -43,12 +45,11 @@ int clean_stdin();
 
 int main(int argc, char* argv[])
 {
-    int working = 0;
     struct record * start = NULL;
-    char usrInp[10], accName[50], accNumTemp[50];
+    int working = 0;
+    char usrInp[10], accName[50], accAddr[150];
     int usrInpSize;
     int accNum = 0;
-    char junkData[50];
    
     printf("\n---  Welcome to the Parker Banking System ---\n");
    
@@ -66,21 +67,41 @@ int main(int argc, char* argv[])
             accNum = getAccNum();
             printf(" account number is: %i",accNum);
             clean_stdin();
+          
+            printf("\nEnter name: ");
+            fgets(accName, sizeof accName, stdin);
+         /* printf("\n name stored:%s\n",accName); */
+            
+            printf("\nEnter address followed by # when done:\n");
+            getaddress(accAddr, sizeof accAddr);
+            printf("\naddress stored:%s",accAddr);
+            clean_stdin();
+
         }
         
         else if (strncmp(usrInp, "printall",usrInpSize) == 0)
         {
-           /* printAllRecords(start);*/
+            printAllRecords(start);
         }
 
         else if (strncmp(usrInp, "find",usrInpSize) == 0)
         {
-            printf("\nPlease enter account number: ");
+            accNum = getAccNum();
+            clean_stdin();
+            printf("\nEnter name: ");
+            fgets(accName, sizeof accName, stdin);
+         /* printf("\n name stored:%s\n",accName); */
+
         }
 
         else if (strncmp(usrInp, "delete",usrInpSize) == 0)
         {
-            printf("\nPlease enter account number: ");
+            accNum = getAccNum();
+            clean_stdin();
+            printf("\nEnter name: ");
+            fgets(accName, sizeof accName, stdin);
+           /* printf("\n name stored:%s\n",accName); */
+
         }
 
         else if (strncmp(usrInp, "quit",usrInpSize) == 0)
@@ -98,6 +119,20 @@ int main(int argc, char* argv[])
     return 0;
 }
 
+/*****************************************************************
+//
+//  Function name: clean_stdin
+//
+//  DESCRIPTION:   A template function
+//                 This function does not do anything.
+//                 Please describe your function correctly.
+//
+//  Parameters:    bar (int) : Describe the meaning
+//
+//  Return values:  0 : some meaning
+//                 -1 : some meaning
+//
+****************************************************************/
 
 int clean_stdin()
 {
@@ -105,13 +140,27 @@ int clean_stdin()
   return 1;
 }
 
+/*****************************************************************
+//
+//  Function name: getAccNum
+//
+//  DESCRIPTION:   A template function
+//                 This function does not do anything.
+//                 Please describe your function correctly.
+//
+//  Parameters:    bar (int) : Describe the meaning
+//
+//  Return values:  0 : some meaning
+//                 -1 : some meaning
+//
+****************************************************************/
+
 int getAccNum()
-{    
-    
+{     
     int input, valid;
     while(valid !=1)
     {
-        printf("Enter account number: \n");
+        printf("\nEnter account number: \n");
         valid = scanf("%d", &input);
 
         if (valid<1 || input <= 0)
@@ -124,7 +173,6 @@ int getAccNum()
     }
   return input;
 }
-
 
 /*****************************************************************
 //
@@ -141,30 +189,27 @@ int getAccNum()
 //
 ****************************************************************/
 
-void getaddress(char address[], int size) {
+void getaddress(char address[], int size)
+{
+    char buffInput;
+    int end = 0, i = 0;
+    while (end != 1)
+    {
 
-}
+      /*  printf("address:%s",address);*/
+        if ((buffInput = getchar()) != '#' && i < size)
+        {
+            address[i] = buffInput;
+            i++;     
+        }
+        else
+        {
+            address[i] = '\0';
+            end = 1;
+        }
+    }
 
-
-
-/*****************************************************************
-//
-//  Function name: getAccName
-//
-//  DESCRIPTION:   A template function
-//                 This function does not do anything.
-//                 Please describe your function correctly.
-//
-//  Parameters:    bar (int) : Describe the meaning
-//
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
-//
-****************************************************************/
-
-
-void getAccName(char accName[]){
-/* take account name and accept white spaces until given a new line character*/
+   
 }
 
 /*****************************************************************
@@ -184,7 +229,7 @@ void getAccName(char accName[]){
 
 void menu()
 {
-    printf("\nPlease type the name of the option you\nwould like to access\n\n");
+    printf("\nPlease type the name of the option you\nwould like to access:\n\n");
     printf("add: Add a new record in the database\n");
     printf("printall: Print all records in the database\n");
     printf("find: Find record(s) with a specified account #\n");

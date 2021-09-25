@@ -37,7 +37,7 @@
 
 int addRecord (struct record **start, int accNum, char name[], char address[])
 {
-return 0;
+    return 0;
 }
 
 /*****************************************************************
@@ -78,7 +78,7 @@ void printAllRecords(struct record *start)
 
 int findRecord (struct record *start, int accNum)
 {
-return 0;
+    return 0;
 }
 
 /*****************************************************************
@@ -100,6 +100,6 @@ return 0;
 
 int deleteRecord(struct record **start, int accNum)
 {
-return 0;
+    return 0;
 }
 
