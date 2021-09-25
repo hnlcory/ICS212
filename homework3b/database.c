@@ -37,6 +37,7 @@
 
 int addRecord (struct record **start, int accNum, char name[], char address[])
 {
+    printf("\n---- addRecord called ----\n");
     return 0;
 }
 
@@ -58,7 +59,7 @@ int addRecord (struct record **start, int accNum, char name[], char address[])
 
 void printAllRecords(struct record *start)
 {
-    printf("Print All Records\n");
+    printf("\n---- printAllRecords called ----\n");
 }
 
 /*****************************************************************
@@ -78,6 +79,7 @@ void printAllRecords(struct record *start)
 
 int findRecord (struct record *start, int accNum)
 {
+    printf("\n---- fintRecord called ----\n");
     return 0;
 }
 
@@ -100,6 +102,7 @@ int findRecord (struct record *start, int accNum)
 
 int deleteRecord(struct record **start, int accNum)
 {
+    printf("\n---- deleteRecord called ----\n");
     return 0;
 }
 

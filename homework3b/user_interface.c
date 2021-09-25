@@ -76,7 +76,8 @@ int main(int argc, char* argv[])
             getaddress(accAddr, sizeof accAddr);
             printf("\naddress stored:%s",accAddr);
             clean_stdin();
-
+            
+            addRecord(&start, accNum, accName, accAddr);
         }
         
         else if (strncmp(usrInp, "printall",usrInpSize) == 0)
@@ -88,20 +89,16 @@ int main(int argc, char* argv[])
         {
             accNum = getAccNum();
             clean_stdin();
-            printf("\nEnter name: ");
-            fgets(accName, sizeof accName, stdin);
-         /* printf("\n name stored:%s\n",accName); */
-
+            
+            findRecord(start, accNum);  
         }
 
         else if (strncmp(usrInp, "delete",usrInpSize) == 0)
         {
             accNum = getAccNum();
             clean_stdin();
-            printf("\nEnter name: ");
-            fgets(accName, sizeof accName, stdin);
-           /* printf("\n name stored:%s\n",accName); */
 
+            deleteRecord(&start, accNum);
         }
 
         else if (strncmp(usrInp, "quit",usrInpSize) == 0)
@@ -114,7 +111,6 @@ int main(int argc, char* argv[])
         }
 
     }
-
 
     return 0;
 }
@@ -207,9 +203,7 @@ void getaddress(char address[], int size)
             address[i] = '\0';
             end = 1;
         }
-    }
-
-   
+    } 
 }
 
 /*****************************************************************
