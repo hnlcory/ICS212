@@ -19,6 +19,7 @@
 
 #include <stdio.h>
 #include "database.h"
+extern int debugMode;
 
 /*****************************************************************
 //
@@ -37,7 +38,16 @@
 
 int addRecord (struct record **start, int accNum, char name[], char address[])
 {
-    printf("\n---- addRecord called ----\n");
+    if (debugMode == 1)
+    {
+        printf("\n\n<<<< ----------------  >>>>");
+        printf("\n<<<< Debug Mode Active >>>>");
+        printf("\n---- addRecord called");
+        printf("\n---- Account Number: %d", accNum);
+        printf("\n---- Account Name: %s", name);
+        printf("\n---- Account Address: %s", address);
+        printf("\n<<<< ----------------  >>>>\n\n");
+    }
     return 0;
 }
 
@@ -59,7 +69,14 @@ int addRecord (struct record **start, int accNum, char name[], char address[])
 
 void printAllRecords(struct record *start)
 {
-    printf("\n---- printAllRecords called ----\n");
+    if (debugMode == 1)
+    {
+        printf("\n\n<<<< ----------------  >>>>");
+        printf("\n<<<< Debug Mode Active >>>>");
+        printf("\n---- printAllRecords called");
+        printf("\n---- Records: ");
+        printf("\n<<<< ----------------  >>>>\n\n");
+    }
 }
 
 /*****************************************************************
@@ -78,8 +95,15 @@ void printAllRecords(struct record *start)
 ****************************************************************/
 
 int findRecord (struct record *start, int accNum)
-{
-    printf("\n---- fintRecord called ----\n");
+{ 
+    if (debugMode == 1)
+    {
+        printf("\n\n<<<< ----------------  >>>>");
+        printf("\n<<<< Debug Mode Active >>>>");
+        printf("\n---- findRecord called");
+        printf("\n---- Account Number: %d", accNum);
+        printf("\n<<<< ----------------  >>>>\n\n");
+    }
     return 0;
 }
 
@@ -102,7 +126,14 @@ int findRecord (struct record *start, int accNum)
 
 int deleteRecord(struct record **start, int accNum)
 {
-    printf("\n---- deleteRecord called ----\n");
+    if (debugMode == 1)
+    { 
+        printf("\n\n<<<< ----------------  >>>>");
+        printf("\n<<<< Debug Mode Active >>>>");
+        printf("\n---- deleteRecord called");
+        printf("\n---- Account Number: %d", accNum);
+        printf("\n<<<< ----------------  >>>>\n\n");
+    }
     return 0;
 }
 
