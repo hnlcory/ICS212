@@ -12,8 +12,8 @@
 //
 //  FILE:        database.c
 //
-//  DESCRIPTION:
-//   Describe the file
+//  DESCRIPTION: The database for user_interface. adds, finds,
+//               prints, and deletes records.
 //
 ****************************************************************/
 
@@ -25,14 +25,14 @@ extern int debugMode;
 //
 //  Function name: addRecord
 //
-//  DESCRIPTION:   A template function
-//                 This function does not do anything.
-//                 Please describe your function correctly.
+//  DESCRIPTION:   Adds a new record.
 //
-//  Parameters:    bar (int) : Describe the meaning
+//   PARAMETERS:   start (struct record**): double pointer to the start of the record
+//                 accNum (int): account number given by the user
+//                 name (char[]): account name given by the user
+//                 address (char[]): account address given by the user
 //
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
+//  Return values:  0 : completed
 //
 ****************************************************************/
 
@@ -55,14 +55,9 @@ int addRecord (struct record **start, int accNum, char name[], char address[])
 //
 //  Function name: printAllRecords
 //
-//  DESCRIPTION:   A template function
-//                 This function does not do anything.
-//                 Please describe your function correctly.
+//  DESCRIPTION:   Prints all records held.
 //
-//  Parameters:    bar (int) : Describe the meaning
-//
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
+//  Parameters:    start (struct record*): the start of records.
 //
 ****************************************************************/
 
@@ -83,14 +78,12 @@ void printAllRecords(struct record *start)
 //
 //  Function name: findRecord
 //
-//  DESCRIPTION:   A template function
-//                 This function does not do anything.
-//                 Please describe your function correctly.
+//  DESCRIPTION:   Finds a record from the given account number.
 //
-//  Parameters:    bar (int) : Describe the meaning
+//  Parameters:    accNum (int) : account number.
+//                 start (record*) : the start of records.
 //
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
+//  Return values:  0 : Completed properly
 //
 ****************************************************************/
 
@@ -111,15 +104,12 @@ int findRecord (struct record *start, int accNum)
 //
 //  Function name: deleteRecord
 //
-//  DESCRIPTION:   A template function
-//                 This function does not do anything.
-//                 Please describe your function correctly.
+//  DESCRIPTION:   Deletes a record given an account number.
 //
-//  Parameters:    bar (int) : Describe the meaning
+//  Parameters:    accNum (int) : given account number.
+//                 start (struct record**): double pointer to the start of the record.
 //
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
-//
+//  Return values:  0 : Completed properly
 // 
 ****************************************************************/
 

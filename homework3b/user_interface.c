@@ -12,7 +12,8 @@
 //
 //  FILE:        user_interface.c
 //
-//  DESCRIPTION: Calls the  correct functions of the DB part
+//  DESCRIPTION: Validates info and calls the 
+//               correct functions of the Database.
 //   
 ****************************************************************/
 
@@ -32,15 +33,13 @@ int clean_stdin();
 //
 //  Function name: main
 //
-//  DESCRIPTION:   Don't forget to describe what your main
-//                 functions does.
+//  DESCRIPTION:   Shows user the UI and gives a selection of
+//                 possible choices. Validates the input.
 //
 //  Parameters:    argc (int) : The number of elements in argv
-//                 argv (char*[]) : An array of arguments passed
-//                                  to the program.
+//                 argv (char*[]) : An array of arguments passed.
 //
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
+//  Return values:  0 : program exited succesfully.
 //
 ****************************************************************/
 
@@ -148,14 +147,10 @@ int main(int argc, char* argv[])
 //
 //  Function name: clean_stdin
 //
-//  DESCRIPTION:   A template function
-//                 This function does not do anything.
-//                 Please describe your function correctly.
+//  DESCRIPTION:   Catches possible inputs leftover.
+//                 Cleans stdin in event of.
 //
-//  Parameters:    bar (int) : Describe the meaning
-//
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
+//  Return values: 1 : there is a character caught.
 //
 ****************************************************************/
 
@@ -177,14 +172,10 @@ int clean_stdin()
 //
 //  Function name: getAccNum
 //
-//  DESCRIPTION:   A template function
-//                 This function does not do anything.
-//                 Please describe your function correctly.
+//  DESCRIPTION:   Prompts the user for a valid account number,
+//                 validates input.
 //
-//  Parameters:    bar (int) : Describe the meaning
-//
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
+//  Return values: Valid address given by the user.
 //
 ****************************************************************/
 
@@ -220,14 +211,11 @@ int getAccNum()
 //
 //  Function name: getaddress
 //
-//  DESCRIPTION:   A template function
-//                 This function does not do anything.
-//                 Please describe your function correctly.
+//  DESCRIPTION:   Gets the mail address of the user, checks
+//                 if entry is done with "#"
 //
-//  Parameters:    bar (int) : Describe the meaning
-//
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
+//  Parameters:    address (char[]): The address given by user
+//                 size (int): The max size of the address
 //
 ****************************************************************/
 
@@ -266,14 +254,7 @@ void getaddress(char address[], int size)
 //
 //  Function name: menu
 //
-//  DESCRIPTION:   A template function
-//                 This function does not do anything.
-//                 Please describe your function correctly.
-//
-//  Parameters:    bar (int) : Describe the meaning
-//
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
+//  DESCRIPTION:   Prints the formatted menu to the command line
 //
 ****************************************************************/
 
