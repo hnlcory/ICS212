@@ -50,7 +50,7 @@ int main(int argc, char* argv[])
     struct record * start = NULL;
     int working = 0;
     char usrInp[10], accName[50], accAddr[150];
-    int usrInpSize;
+    int usrInpSize, accNameSize;
     int accNum = 0;
      
     int argLen = 1;
@@ -64,7 +64,8 @@ int main(int argc, char* argv[])
     {
         if (strcmp(argv[argLen], "debugmode") == 0)
         {
-             printf("deb");
+             printf("\n<<<NOTE: Debug Mode Active>>>\n");
+             debugMode = 1;
         }
         else 
         {
@@ -74,14 +75,9 @@ int main(int argc, char* argv[])
     }    
     else
     {
+        debugMode = 0;
     }
-
-
-    /* if arg values are debugmode, set debugMode to 1
- *
- *  else if thees more in argv than debug, print error, set working to 0
- *  */   
-   
+     
     while (working != 1)
     {   
          
@@ -92,17 +88,22 @@ int main(int argc, char* argv[])
 
         if (strncmp(usrInp, "add",usrInpSize) == 0)
         {  
-            printf("add begin\n");
+ 
             accNum = getAccNum();
-            printf(" account number is: %i",accNum);
             clean_stdin();
           
             printf("\nEnter name: ");
             fgets(accName, sizeof accName, stdin);
-         /* printf("\n name stored:%s\n",accName); */
-            
+
+            for (accNameSize = 0; accName[accNameSize] != '\0';accNameSize++)
+            {
+                if(accName[accNameSize]=='\n')
+                {
+                    accName[accNameSize]='\0';
+                }
+            }       
+    
             getaddress(accAddr, sizeof accAddr);
-            printf("\naddress stored:%s",accAddr);
             clean_stdin();
             
             addRecord(&start, accNum, accName, accAddr);
@@ -160,6 +161,14 @@ int main(int argc, char* argv[])
 
 int clean_stdin()
 {
+    if (debugMode == 1)
+    {
+        printf("\n\n<<<< ----------------  >>>>");
+        printf("\n<<<< Debug Mode Active >>>>");
+        printf("\n---- clean_stdin called");
+        printf("\n<<<< ----------------  >>>>\n\n");
+    }
+
   while (getchar()!='\n');
   return 1;
 }
@@ -182,6 +191,15 @@ int clean_stdin()
 int getAccNum()
 {     
     int input, valid;
+ 
+     if (debugMode == 1)
+    {
+        printf("\n\n<<<< ----------------  >>>>");
+        printf("\n<<<< Debug Mode Active >>>>");
+        printf("\n---- getAccNum called");
+        printf("\n<<<< ----------------  >>>>\n\n");
+    }    
+   
     while(valid !=1)
     {
         printf("\nEnter account number: \n");
@@ -190,7 +208,7 @@ int getAccNum()
         if (valid<1 || input <= 0)
         {
             clean_stdin();
-            printf("error, please enter valid account number");
+            printf("-- Error, please enter valid account number --");
             valid=0;
         }
  
@@ -218,6 +236,14 @@ void getaddress(char address[], int size)
     char buffInput;
     int end = 0, i = 0;
    
+    if (debugMode == 1)
+    {
+        printf("\n\n<<<< ----------------  >>>>");
+        printf("\n<<<< Debug Mode Active >>>>");
+        printf("\n---- getAddress called");
+        printf("\n<<<< ----------------  >>>>\n\n");
+    }
+    
     printf("\nEnter address followed by # when done:\n");
     while (end != 1)
     {
@@ -253,6 +279,14 @@ void getaddress(char address[], int size)
 
 void menu()
 {
+    if (debugMode == 1)
+    {
+        printf("\n\n<<<< ----------------  >>>>");
+        printf("\n<<<< Debug Mode Active >>>>");
+        printf("\n---- menu called");
+        printf("\n<<<< ----------------  >>>>\n\n");
+    }
+
     printf("\n---  Welcome to the Parker Banking System ---\n");
     printf("\nPlease type the name of the option you\nwould like to access:\n\n");
     printf("add: Add a new record in the database\n");
