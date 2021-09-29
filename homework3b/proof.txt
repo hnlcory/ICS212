@@ -1,0 +1,48 @@
+Script started on Tue 28 Sep 2021 05:56:08 PM HST
+]0;corylp@uhx02:~/homework3b[?1034huhx02:/home/c/corylp/homework3b% make[K[K[K[Ktouch *.c
+]0;corylp@uhx02:~/homework3buhx02:/home/c/corylp/homework3b% make
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -ansi -pedantic-errors -Wall -c database.c
+gcc -o homework3 user_interface.o database.o 
+]0;corylp@uhx02:~/homework3buhx02:/home/c/corylp/homework3b% make
+make: Nothing to be done for `all'.
+]0;corylp@uhx02:~/homework3buhx02:/home/c/corylp/homework3b% touch user_interface.c
+]0;corylp@uhx02:~/homework3buhx02:/home/c/corylp/homework3b% touch user_interface.cmake[K
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -o homework3 user_interface.o database.o 
+]0;corylp@uhx02:~/homework3buhx02:/home/c/corylp/homework3b% touch *.o
+]0;corylp@uhx02:~/homework3buhx02:/home/c/corylp/homework3b% touch *.o[5Pmake
+gcc -o homework3 user_interface.o database.o 
+]0;corylp@uhx02:~/homework3buhx02:/home/c/corylp/homework3b% ./homework3
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+cat proof.txt             exit
+
+--- Invalid Input, Try Again ---
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+q
+]0;corylp@uhx02:~/homework3buhx02:/home/c/corylp/homework3b% exit
+exit
+
+Script done on Tue 28 Sep 2021 05:57:52 PM HST

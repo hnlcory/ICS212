@@ -1,0 +1,324 @@
+Script started on Tue 28 Sep 2021 06:18:29 PM HST
+]0;corylp@uhx02:~/homework3b[?1034huhx02:/home/c/corylp/homework3b% ./homework3
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+a adddddd
+
+--- Invalid Input, Try Again ---
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+ad
+
+Enter account number: 
+0
+-- Error, please enter valid account number --
+Enter account number: 
+-1
+-- Error, please enter valid account number --
+Enter account number: 
+abc
+-- Error, please enter valid account number --
+Enter account number: 
+25627
+
+Enter name: Cory
+
+Enter address followed by # when done:
+Ew  Oahu Hawaii
+96706#
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+print
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+fi
+
+Enter account number: 
+63724     0
+-- Error, please enter valid account number --
+Enter account number: 
+46332
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+d
+
+Enter account number: 
+463635
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+q
+]0;corylp@uhx02:~/homework3buhx02:/home/c/corylp/homework3b% ./homework3 debugmode
+
+<<<NOTE: Debug Mode Active>>>
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- menu called
+<<<< ----------------  >>>>
+
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+ad
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- getAccNum called
+<<<< ----------------  >>>>
+
+
+Enter account number: 
+57382
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- clean_stdin called
+<<<< ----------------  >>>>
+
+
+Enter name: Cory
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- getAddress called
+<<<< ----------------  >>>>
+
+
+Enter address followed by # when done:
+Oahu      Hawa  ii Oahu
+ewa beach
+#
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- clean_stdin called
+<<<< ----------------  >>>>
+
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- addRecord called
+---- Account Number: 57382
+---- Account Name: Cory
+---- Account Address: Hawaii Oahu
+ewa beach
+
+<<<< ----------------  >>>>
+
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- menu called
+<<<< ----------------  >>>>
+
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+p
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- printAllRecords called
+---- Records: 
+<<<< ----------------  >>>>
+
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- menu called
+<<<< ----------------  >>>>
+
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+find
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- getAccNum called
+<<<< ----------------  >>>>
+
+
+Enter account number: 
+64637
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- clean_stdin called
+<<<< ----------------  >>>>
+
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- findRecord called
+---- Account Number: 64637
+<<<< ----------------  >>>>
+
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- menu called
+<<<< ----------------  >>>>
+
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+d
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- getAccNum called
+<<<< ----------------  >>>>
+
+
+Enter account number: 
+43728
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- clean_stdin called
+<<<< ----------------  >>>>
+
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- deleteRecord called
+---- Account Number: 43728
+<<<< ----------------  >>>>
+
+
+
+<<<< ----------------  >>>>
+<<<< Debug Mode Active >>>>
+---- menu called
+<<<< ----------------  >>>>
+
+
+---  Welcome to the Parker Banking System ---
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+q
+]0;corylp@uhx02:~/homework3buhx02:/home/c/corylp/homework3b% exit
+exit
+
+Script done on Tue 28 Sep 2021 06:21:57 PM HST
