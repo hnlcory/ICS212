@@ -63,13 +63,13 @@ int main(int argc, char* argv[])
     {
         if (strcmp(argv[argLen], "debugmode") == 0)
         {
-             printf("\n<<<NOTE: Debug Mode Active>>>\n");
-             debugMode = 1;
+            printf("\n<<<NOTE: Debug Mode Active>>>\n");
+            debugMode = 1;
         }
         else 
         {
-        printf("\n---Incorrect argument given---\n");
-        working = 1;
+            printf("\n---Incorrect argument given---\n");
+            working = 1;
         }
     }    
     else
@@ -78,8 +78,7 @@ int main(int argc, char* argv[])
     }
      
     while (working != 1)
-    {   
-         
+    {        
         menu();
         fgets(usrInp, 10, stdin);
         usrInp[strcspn(usrInp, "\n")] = 0;
@@ -90,7 +89,6 @@ int main(int argc, char* argv[])
  
             accNum = getAccNum();
             clean_stdin();
-          
             printf("\nEnter name: ");
             fgets(accName, sizeof accName, stdin);
 
@@ -104,7 +102,6 @@ int main(int argc, char* argv[])
     
             getaddress(accAddr, sizeof accAddr);
             clean_stdin();
-            
             addRecord(&start, accNum, accName, accAddr);
         }
         
@@ -117,7 +114,6 @@ int main(int argc, char* argv[])
         {
             accNum = getAccNum();
             clean_stdin();
-            
             findRecord(start, accNum);  
         }
 
@@ -125,7 +121,6 @@ int main(int argc, char* argv[])
         {
             accNum = getAccNum();
             clean_stdin();
-
             deleteRecord(&start, accNum);
         }
 
@@ -137,7 +132,6 @@ int main(int argc, char* argv[])
         {
             printf("\n--- Invalid Input, Try Again ---\n");   
         }
-
     }
 
     return 0;
@@ -164,8 +158,8 @@ int clean_stdin()
         printf("\n<<<< ----------------  >>>>\n\n");
     }
 
-  while (getchar()!='\n');
-  return 1;
+    while (getchar()!='\n');
+    return 1;
 }
 
 /*****************************************************************
@@ -183,7 +177,7 @@ int getAccNum()
 {     
     int input, valid;
  
-     if (debugMode == 1)
+    if (debugMode == 1)
     {
         printf("\n\n<<<< ----------------  >>>>");
         printf("\n<<<< Debug Mode Active >>>>");
@@ -202,9 +196,8 @@ int getAccNum()
             printf("-- Error, please enter valid account number --");
             valid=0;
         }
- 
     }
-  return input;
+    return input;
 }
 
 /*****************************************************************
@@ -235,8 +228,6 @@ void getaddress(char address[], int size)
     printf("\nEnter address followed by # when done:\n");
     while (end != 1)
     {
-
-      /*  printf("address:%s",address);*/
         if ((buffInput = getchar()) != '#' && i < size)
         {
             address[i] = buffInput;
