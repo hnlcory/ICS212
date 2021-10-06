@@ -1,0 +1,40 @@
+--------------------------------------------------------------------------------
+addRecord
+
+*** Assume the following variables are already defined. ***
+
+- start: The pointer to the first record of the list (or NULL)
+- uaccountno: The user's account number (integer)
+- uname: a character array containing the user's name
+- uaddress: a character array containing the user's address
+
+
+struct record
+{
+    int               accountno;
+    char              name[25];
+    char              address[50];
+    struct record*    next;
+};
+
+--------------------------------------------------------------------------------
+
+* WRITE YOUR PSEUDOCODE HERE
+
+define an int called status
+copy from -1 to status
+define a pointer to record called temp
+
+// if start == null, list empty create first thing and leave
+if ( start is qual to NULL )
+copy from NULL to start
+allocate a heap space and store its address into start
+copy from uaccountno to accountno in the record whose address is in start
+copy from uname to name in the record whose address is in start
+copy from uaddress to address in the record whose address is in start
+copy from NULL to next in the record whose address is start
+copy from 0 to status
+
+
+// else, start has address of record, at least list of 1+ things.
+allocate a heap space and store its address in the next field whose address is in temp
