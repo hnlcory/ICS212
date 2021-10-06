@@ -38,7 +38,6 @@ if ( start is equal to NULL )
     copy from uname to name in the record whose address is in start
     copy from uaddress to address in the record whose address is in start
     copy from NULL to next in the record whose address is start
-    copy from 0 to status
 
 
 // else, start has address of record, at least list of 1+ things.
@@ -47,11 +46,14 @@ else
  copy from start to current
 
 //check for duplicate account number (if uaccountnumber is in the list, status = -1)
-while ( current is not equal to NULL or status does not equal -1)
+do
     if ( accountno in the record whose address is in current equals uaccountno)
         copy from -1 to status
     else
         copy from next in the record whose address is in current to current
+        
+while ( current is not equal to NULL or status does not equal -1)
+    
 
 
 
@@ -67,13 +69,13 @@ if ( accountno in the record whose address is in temp is greater than the accoun
     copy start to the next of the record whose address is in temp
     copy from temp to start
     copy from temp to current
-    copy from 0 to status
+    //the code is going to keep going, it must use a variable to get out of or somehing*****
 
 //the account being added is somewhere else but is not new head
 do
     copy from next in the record whose address is in current to current
     copy from i + 1 to i
-while ( uaccountno is less than the accountno in the record whose address is in current )
+while ( uaccountno is less than the accountno in the record whose address is in current ) *** or while some varibale is not something
     
   
 
