@@ -20,7 +20,7 @@ struct record
 --------------------------------------------------------------------------------
 
 define an int called i
-defint an int called j
+define an int called j
 define an int called status
 define a pointer to record called temp
 define a pointer to record called current
