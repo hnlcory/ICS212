@@ -33,7 +33,7 @@ else if (status == 1)
     copy from start to current
 
 //check for duplicate account number (if uaccountnumber is in the list, status = -1) 
-    while ( current is not equal to NULL AND status is not equal to -1)
+    while ( current is not equal to NULL AND status is not equal to -1)                   ***********
         if ( accountno in the record whose address is in current equals uaccountno)
             copy from -1 to status
         else
@@ -55,7 +55,7 @@ else if (status == 1)
             copy from 0 to status
 
 //the account being added is somewhere else but is not new head
-    while ( uaccountno is less than the accountno in the record whose address is in current AND status is equal to 1 AND current does not equal NULL)
+    while ( uaccountno is less than the accountno in the record whose address is in current AND status is equal to 1 AND current does not equal NULL) ********
         copy from next in the record whose address is in current to current
         copy from i + 1 to i
   
