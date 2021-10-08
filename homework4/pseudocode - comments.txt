@@ -32,7 +32,7 @@ if ( start is equal to NULL )
 else if (status == 1)
     copy from start to current
 
-//check for duplicate account number (if uaccountnumber is in the list, status = -1) 
+//check for duplicate account number (if uaccountnumber is in the list, status = -1)  
     while ( current is not equal to NULL AND status is not equal to -1)                   ***********
         if ( accountno in the record whose address is in current equals uaccountno)
             copy from -1 to status
