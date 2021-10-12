@@ -38,6 +38,23 @@
 
 int main(int argc, char* argv[])
 {
+
+   struct pokemon pArray[3] = {10,"Pikachu",30,"Ditto",7,"Pidgey"};
+   struct pokemon pArray2[2] = {85,"Weedle",6,"Weedle"};
+  
+   int inp;
+   printf("\n1 or 2 array\n");
+   fscanf(stdin, "%d", &inp);
+   if (inp == 1)
+   {
+   printf("1");
+   writefile(pArray,3,"output.txt");
+   }
+   else
+   {
+   printf("2");
+   writefile(pArray2,2,"output.txt");
+   }    
    return 0;
 }
 
@@ -69,10 +86,11 @@ int writefile( struct pokemon pokearray[ ], int num, char filename[ ] )
 
     else
     {
+   
     /*check for data alrady in file*/  
         while (i < num )
         {
-            /*do the actual add stuff*/
+            /*do the actual add stuff, adding bigger to smaller adds a 0?*/
             fprintf(fileOut,"%i\n%s\n",pokearray[i].level,pokearray[i].name);
             i++;
         }
