@@ -23,61 +23,6 @@
 
 /*****************************************************************
 //
-//  Function name: main
-//
-//  DESCRIPTION:   Don't forget to describe what your main
-//                 functions does.
-//
-//  Parameters:    argc (int) : The number of elements in argv
-//                 argv (char*[]) : An array of arguments passed
-//                                  to the program.
-//
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
-//
-****************************************************************/
-
-int main(int argc, char* argv[])
-{
-   
-   struct pokemon pArray[3] ={10,"Pikachu",30,"Ditto",7,"Pidgey"};
-   struct pokemon pArray2[2] ={85,"Weedle",6,"Weedle"};
-
-
-   struct pokemon pArrayW[2];
-   int j = 2;
-   int itr;
-   int help = sizeof(pArrayW)/sizeof(pArrayW[0]);
-   
-   int inp;
-   printf("\n1 or 2 array\n");
-   fscanf(stdin, "%d", &inp);
-   
-   if (inp == 1)
-   {
-   writefile(pArray,3,"output.txt");
-   }
-   
-   else
-   {
-   writefile(pArray2,2,"output.txt");
-   }
-    
-     
-   readfile(pArrayW,&j,"output.txt");
-   
-
-   for (itr=0; itr < help; itr++)
-    {
-
-    printf("%i\n%s\n",pArrayW[itr].level,pArrayW[itr].name);
-
-    }  
-   return 0;
-}
-
-/*****************************************************************
-//
 //  Function name: writefile
 //
 //  DESCRIPTION:   A function to write pokemon from an array
@@ -120,14 +65,14 @@ int writefile( struct pokemon pokearray[ ], int num, char filename[ ] )
 //
 //  Function name: readfile
 //
-//  DESCRIPTION:   A template function
-//                 This function does not do anything.
-//                 Please describe your function correctly.
+//  DESCRIPTION:   A function to read pokemon from a text file
 //
-//  Parameters:    bar (int) : Describe the meaning
+//  Parameters:    pokearray (struct pokemon) : an aray that holds pokemon
+//                 num (* int) : pointer to the number of pokemon
+//                 filename (char[]) : the name of the output file
 //
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
+//  Return values:  0 : sucessful write
+//                 -1 : unsucessful write
 //
 ****************************************************************/
 
