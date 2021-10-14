@@ -39,13 +39,14 @@
 
 int writefile( struct pokemon pokearray[ ], int num, char filename[ ] )
 {
+    int status = 0;
     int i = 0;
     FILE * fileOut;
     fileOut = fopen(filename,"w");
 
     if (fileOut == NULL)
     {
-        return -1;
+        status = -1;
     }
 
     else
@@ -57,8 +58,10 @@ int writefile( struct pokemon pokearray[ ], int num, char filename[ ] )
         while (i < num);
 
         fclose(fileOut);
-        return 0; 
+        num= i;
+         
     }
+    return status;
 }
 
 /*****************************************************************
@@ -78,15 +81,16 @@ int writefile( struct pokemon pokearray[ ], int num, char filename[ ] )
 
 int readfile( struct pokemon pokearray[ ], int* num, char filename[ ] )
 { 
+    int status = 0;
     int i = 0;
     int end = 0;
     int tempLevel;
     FILE * fileIn;
     fileIn = fopen(filename,"r");    
- 
+
     if (fileIn == NULL)
     {      
-        return -1;
+        status = -1;
     }
   
     else
@@ -96,20 +100,21 @@ int readfile( struct pokemon pokearray[ ], int* num, char filename[ ] )
             if (fscanf(fileIn, "%d\n", &tempLevel) != 1)
             {
                 end = 1;
-                i = i-1;
+                i = i -1;
             }
             
             else
             {
                 pokearray[i].level = tempLevel;
                 fgets(pokearray[i].name, 25,fileIn);
-                i++;
+                i++;                  
             }
+            
         }
         while (end == 0 && feof(fileIn) == 0);
     }
 
     *num = i;
     fclose(fileIn);
-    return 0;    
+    return status;    
 }

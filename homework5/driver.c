@@ -1,19 +1,18 @@
 /*****************************************************************
 //
-//  NAME:        Ravi Narayan
+//  NAME:        Cory Parker
 //
-//  HOMEWORK:    1
+//  HOMEWORK:    5
 //
 //  CLASS:       ICS 212
 //
 //  INSTRUCTOR:  Ravi Narayan
 //
-//  DATE:        September 3, 2112
+//  DATE:        October 13, 2021
 //
-//  FILE:        template.c
+//  FILE:        driver.c
 //
-//  DESCRIPTION:
-//   Describe the file
+//  DESCRIPTION: Driver test code for iofunctions.c
 //
 ****************************************************************/
 
@@ -24,28 +23,55 @@
 //
 //  Function name: main
 //
-//  DESCRIPTION:   Don't forget to describe what your main
-//                 functions does.
+//  DESCRIPTION:   Tests the read and write functions to prove
+//                 their sucess.
 //
 //  Parameters:    argc (int) : The number of elements in argv
 //                 argv (char*[]) : An array of arguments passed
 //                                  to the program.
 //
-//  Return values:  0 : some meaning
-//                 -1 : some meaning
-//
+//  Return values:  0 : driver code completed properly.
+//                 
 ****************************************************************/
 
 int main(int argc, char* argv[])
 {
-    struct pokemon pokemonbank[5];
+    struct pokemon pokemonbank[4];
     struct pokemon pokemonbankRead[5] = {10,"Pikachu",30,"Ditto",7,"Pidgey",85,"Weedle",6,"Magikarp"};
-    int numpokemons;
+    int numpokemons = 5;
+    int itrSize;
+    int itr;
 
+    printf("\nwriting to file output.txt...\n"); 
+    if (writefile(pokemonbankRead,numpokemons,"output.txt") == 0)
+    {
+        printf("\nfile sucessfully written to!\n");
+        printf("pokemon present: %i\n\n",numpokemons);
+    }
 
+    else
+    {
+        printf("\nfailed to write to file\n");
+    } 
     
-    writefile(pokemonbankRead,5,"output.txt");
-    
+    printf("reading file output.txt to empty array smaller than data...\n");
+    if (readfile(pokemonbank,&numpokemons,"output.txt") == 0)
+    {
+        printf("\nfile sucessfully read!\n");
+        printf("pokemon present: %i\ndata in array:\n",numpokemons);
+        itrSize = sizeof(pokemonbank)/sizeof(pokemonbank[0]);
+
+        for (itr=0; itr < itrSize; itr++)
+        {
+            printf("%i\n%s\n",pokemonbank[itr].level,pokemonbank[itr].name);
+        } 
+       
+    } 
    
-   return 0;
+    else
+    {
+        printf("\nfailed to read file\n");
+    }
+
+    return 0;
 }

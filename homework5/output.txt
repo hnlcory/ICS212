@@ -1,3 +1,29 @@
+Script started on Wed 13 Oct 2021 08:32:26 PM HST
+]0;corylp@uhx02:~/homework5[?1034huhx02:/home/c/corylp/homework5% ./homework5 
+
+writing to file output.txt...
+
+file sucessfully written to!
+pokemon present: 5
+
+reading file output.txt to empty array smaller than data...
+
+file sucessfully read!
+pokemon present: 4
+data in array:
+10
+Pikachu
+
+30
+Ditto
+
+7
+Pidgey
+
+85
+Weedle
+
+]0;corylp@uhx02:~/homework5uhx02:/home/c/corylp/homework5% cat output.txt 
 10
 Pikachu
 30
@@ -8,3 +34,7 @@ Pidgey
 Weedle
 6
 Magikarp
+]0;corylp@uhx02:~/homework5uhx02:/home/c/corylp/homework5% exit
+exit
+
+Script done on Wed 13 Oct 2021 08:32:56 PM HST
