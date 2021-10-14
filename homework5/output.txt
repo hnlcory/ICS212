@@ -1,0 +1,10 @@
+10
+Pikachu
+30
+Ditto
+7
+Pidgey
+85
+Weedle
+6
+Magikarp

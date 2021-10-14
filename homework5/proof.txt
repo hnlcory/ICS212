@@ -1,0 +1,8 @@
+Script started on Wed 13 Oct 2021 11:10:09 PM HST
+]0;corylp@uhx02:~/homework5[?1034huhx02:/home/c/corylp/homework5% ./homework5 [8Pmake
+gcc -ansi -pedantic-errors -Wall -c iofunctions.c
+gcc -o homework5 iofunctions.o driver.o
+]0;corylp@uhx02:~/homework5uhx02:/home/c/corylp/homework5% exit
+exit
+
+Script done on Wed 13 Oct 2021 11:10:18 PM HST
