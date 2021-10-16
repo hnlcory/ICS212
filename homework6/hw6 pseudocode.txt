@@ -1,0 +1,20 @@
+start: The pointer to the first record of the list (or NULL)
+uaccountno: The user's account number (integer)
+
+define an int called status
+define an int called itr
+define a pointer to record called temp
+
+if (start is equal to NULL)
+copy from -1 to status
+
+else
+copy from start to temp
+
+while (status is equal to 0)
+if (the accountno whose address is stored in temp is equal to uaccountno)
+*do the remove and patch list thingy here**
+
+else
+copy from the next of the record whose address is stored in temp to temp
+copy from itr + 1 to itr
