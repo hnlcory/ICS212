@@ -8,22 +8,28 @@ define a pointer to record called holder
 copy from 1 to status
 copy from 0 to itr
 
-if (start is equal to NULL)
+if ( start is equal to NULL )
     copy from -1 to status
 
 else
     copy from start to temp
 
-    while (status is equal to 1)
-        if (the accountno whose address is stored in temp is equal to uaccountno)
+    while ( status is equal to 1 )
+	    if (temp is equal to NULL)
+		    copy from -1 to status
+        else if (the accountno whose address is stored in temp is equal to uaccountno)
             copy from next of the record whose address is stored in temp to holder
             copy from start to temp
-            while (itr - 1 != 0)
+			if ( itr is equal to 0 )
+			    copy from holder to start
+				copy from 0 to status
+            while (status does not equal 0 AND itr - 1 does not equal 0)
                 copy from next of the record whose address is stored in temp to temp
                 copy from itr - 1 to itr
-            copy from holder to the next of the record whose address is stored in temp
-            copy from 0 to status
-        else
+            if ( status does not equal 0 )
+			    copy from holder to the next of the record whose address is stored in temp
+                copy from 0 to status
+		else
             copy from next of the record whose address is stored in temp to temp
             copy from itr + 1 to itr
 return status
