@@ -15,23 +15,23 @@ else
     copy from start to temp
 
     while ( status is equal to 1 )
-	    if (temp is equal to NULL)
-		    copy from -1 to status
+        if (temp is equal to NULL)
+            copy from -1 to status
         else if (the accountno whose address is stored in temp is equal to uaccountno)
             copy from next of the record whose address is stored in temp to holder
-			release the space whose address is in temp
+            release the space whose address is in temp
             copy from start to temp
-			if ( itr is equal to 0 )
-			    copy from holder to start
-				release the space whose address is in temp
-				copy from 0 to status
+            if ( itr is equal to 0 )
+                copy from holder to start
+                release the space whose address is in temp
+                copy from 0 to status
             while (status does not equal 0 AND itr - 1 does not equal 0)
                 copy from next of the record whose address is stored in temp to temp
                 copy from itr - 1 to itr
             if ( status does not equal 0 )
-			    copy from holder to the next of the record whose address is stored in temp
+                copy from holder to the next of the record whose address is stored in temp
                 copy from 0 to status
-		else
-            copy from next of the record whose address is stored in temp to temp
-            copy from itr + 1 to itr
+            else
+                copy from next of the record whose address is stored in temp to temp
+                copy from itr + 1 to itr
 return status
