@@ -18,7 +18,7 @@ copy from 1 to status
 copy from 0 to i
 copy from 0 to j
 
-if ( start is equal to NULL ) *******
+if ( start is equal to NULL )
     allocate a heap space and store its address into start
     copy from uaccountno to accountno in the record whose address is in start
     copy from uname to name in the record whose address is in start
@@ -29,11 +29,11 @@ if ( start is equal to NULL ) *******
 else if (status is equal to 1)
     copy from start to current
 
-    while ( status is not equal to -1 AND current is not equal to NULL )    *****
+    while ( status is not equal to -1 AND current is not equal to NULL )
         if ( accountno in the record whose address is in current equals uaccountno)
             copy from -1 to status
         else
-            copy from next in the record whose address is in current to current  ******
+            copy from next in the record whose address is in current to current
 
     if (status is equal to 1)
         copy from start to current
@@ -49,7 +49,7 @@ else if (status is equal to 1)
             copy from 0 to status
   
     if (status is equal to 1)
-	    while (current does not equal NULL AND uaccountno is less than the accountno in the record whose address is in current) ********
+	    while (current does not equal NULL AND uaccountno is less than the accountno in the record whose address is in current)
             copy from next in the record whose address is in current to current
             copy from i + 1 to i
 			
@@ -64,5 +64,3 @@ else if (status is equal to 1)
         copy from 0 to status
 
 return status    
-
-*Size: 46 lines
