@@ -48,7 +48,7 @@ else if (status is equal to 1)
             copy from temp to current
             copy from 0 to status
   
-    if (status is equal to 1)
+    if (status is equal to 1) /* possibly combine these into the above if */
 	    while (current does not equal NULL AND uaccountno is less than the accountno in the record whose address is in current)
             copy from next in the record whose address is in current to current
             copy from i + 1 to i
