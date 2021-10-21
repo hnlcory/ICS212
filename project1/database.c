@@ -307,12 +307,35 @@ int deleteRecord(struct record **startptr, int uaccountno)
 }
 
 
-/*  ADD VARIABLEs INFO TO DEBUG MODE FOR READ/WRITE/CLEANUP*/
+/*****************************************************************
+//
+//  Function name: foo
+//
+//  DESCRIPTION:   A template function
+//                 This function does not do anything.
+//                 Please describe your function correctly.
+//
+//  Parameters:    bar (int) : Describe the meaning
+//
+//  Return values:  0 : some meaning
+//                 -1 : some meaning
+//
+****************************************************************/
 
 int readfile(struct record ** startPtr, char fileName[])
 {
     int status = 0;
-    struct record temp;
+    int end = 0;
+
+    int endAddress;
+    int i;
+    int accNameSize;   
+    
+    int accountnoTemp;
+    char nameTemp[25];
+    char addressTemp[50];
+    char buffInput;
+
     FILE * fileIn;
     fileIn = fopen(fileName,"r");    
 
@@ -323,10 +346,80 @@ int readfile(struct record ** startPtr, char fileName[])
         printf("\n---- readfile called");
         printf("\n<<<< ----------------  >>>>\n\n");
     }
+ 
+    if (fileIn == NULL)
+    {      
+        status = -1;
+    }
 
-    return 0;
+    else
+    {
+        while (end == 0 && feof(fileIn) == 0)
+        {
+            if (fscanf(fileIn, "%i\n", &accountnoTemp) != 1)
+            {
+                end = 1;
+            }
+
+            else
+            {
+                printf("\naccnumstored:%i\n",accountnoTemp);
+             
+                fgets(nameTemp,25,fileIn);
+                
+                for (accNameSize = 0; nameTemp[accNameSize] != '\0';accNameSize++)
+                {
+                    if(nameTemp[accNameSize]=='\n')
+                    {
+                        nameTemp[accNameSize]='\0';
+                    }
+                }
+
+                printf("namestored:%s",nameTemp);
+                   
+                endAddress = 0, i = 0;
+                while (endAddress != 1)
+                {
+                    printf("in while loop");
+                    if ((buffInput = fgetc(fileIn)) != '#' && i < 50)
+                    {
+                        printf("in the if");
+                        printf("char is:%c",buffInput);
+                        addressTemp[i] = buffInput;
+                        i++;     
+                    }
+                    else
+                    {
+                        printf("in else");
+                        addressTemp[i] = '\0';
+                        endAddress = 1;
+                    }   
+                    printf("end of while loop");             
+                }
+                printf("toward end"); 
+                addRecord(startPtr, accountnoTemp, nameTemp, addressTemp);
+            }   
+        }
+
+    }
+    fclose(fileIn);
+    return status;
 }
 
+/*****************************************************************
+//
+//  Function name: foo
+//
+//  DESCRIPTION:   A template function
+//                 This function does not do anything.
+//                 Please describe your function correctly.
+//
+//  Parameters:    bar (int) : Describe the meaning
+//
+//  Return values:  0 : some meaning
+//                 -1 : some meaning
+//
+****************************************************************/
 
 int writefile(struct record * start, char fileName[])
 {
@@ -362,6 +455,22 @@ int writefile(struct record * start, char fileName[])
     return status;
 }
 
+
+/*****************************************************************
+//
+//  Function name: foo
+//
+//  DESCRIPTION:   A template function
+//                 This function does not do anything.
+//                 Please describe your function correctly.
+//
+//  Parameters:    bar (int) : Describe the meaning
+//
+//  Return values:  0 : some meaning
+//                 -1 : some meaning
+//
+//
+****************************************************************/
 
 void cleanup(struct record ** startPtr) 
 {

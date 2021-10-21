@@ -77,7 +77,9 @@ int main(int argc, char* argv[])
     {
         debugMode = 0;
     }
-     
+    
+    readfile(&start, "records.txt"); 
+  
     while (working != 1)
     {        
         menu();
