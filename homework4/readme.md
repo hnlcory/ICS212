@@ -1,17 +1,17 @@
-Work alone
-You are expected to do your own work on all homework assignments. You may (and are encouraged to) engage in general discussions with your classmates regarding the assignments, but specific details of a solution, including the solution itself, must always be your own work. (See the statement of Academic Dishonesty on the course's syllabus.
+# Pseudocode [8 pts]
 
-Pseudocode [8 pts]
-Write the pseudocode for the function, addRecord, to add a record to a linked list of records.
+Write the pseudocode for the function, `addRecord`, to add a record to a linked list of records.
 
 Assume the following variables are already defined, initialized and available for you to use:
 
-start: A pointer holding the address of the first record of the list (or NULL)
-uaccountno: The user's account number (integer)
-uname: a character array containing the user's name
-uaddress: a character array containing the user's address
+- `start`: A pointer holding the address of the first record of the list (or NULL)
+- `uaccountno`: The user's account number (integer)
+- `uname`: a character array containing the user's name
+- `uaddress`: a character array containing the user's address
+
 Assume you have the following struct definition:
 
+```
 struct record
 {
     int               accountno;
@@ -19,153 +19,188 @@ struct record
     char              address[50];
     struct record*    next;
 };
+```
+
 The pseudocode must have the following features:
 
-Records must be stored in a linked list.
+1. Records must be stored in a **linked list**.
 
-The linked list must be sorted in a descending order of account #.
+1. The linked list must be sorted in a **descending order** of account #.
 
-A new record must be inserted to the linked list without breaking the order.
+1. A new record must be inserted to the linked list without breaking the order.
 
-For example, if the list has records with the following account numbers:
+   For example, if the list has records with the following account numbers:
 
-1010, 1005, 1002, 980, 950
+   `1010`, `1005`, `1002`, `980`, `950`
 
-and you are going to add a record with 1000, the list will be
+   and you are going to add a record with `1000`, the list will be
 
-1010, 1005, 1002, 1000, 980, 950
+   `1010`, `1005`, `1002`, `1000`, `980`, `950`
 
-The list CANNOT have records with a duplicate account number.
+1. The list **CANNOT** have records with a duplicate account number.
 
-If there is a duplicate in the list, return -1 at the end.
-Otherwise (so a successful case), return 0.
-If there is a duplicate, DON'T allocate any memory because otherwise it would cause a memory leak!
+    - If there is a duplicate in the list, return `-1` at the end.
+    - Otherwise (so a successful case), return `0`.
 
-You can ONLY use the vocabulary from the list below
+    <strong style="color:red">If there is a duplicate, DON'T allocate any memory because otherwise it would cause a memory leak!</strong>
 
-Pseudocode is not a standardized language. If you use someone else's vocabulary from the Internet, you are doing wrong.
+1. **You can ONLY use the vocabulary from the list below**
 
-You MUST NOT write any C code (of course in the pseudocode.
+   - Pseudocode is not a standardized language. If you use someone else's vocabulary from the Internet, you are doing wrong.
 
-Don't even think of writing C code first and then translating it to pseudocode. It is no point to do that, and many students in the past also eventually ended up with hard time to translate each line.
+   - You **MUST NOT** write any C code (of course in the pseudocode.
 
-Frequent invalid usage of the vocabulary could result in critically low points or 0.
+      **Don't even think of writing C code first and then translating it to pseudocode.**
+      It is no point to do that, and many students in the past also eventually ended up with hard time to translate each line.
 
-Functioning pseudocode can be about 30 lines or less. About 40 lines should be OK but it may be an indication that your pseudocode has redundant parts or some problem, e.g, you may be making something too complicated. Excessively long pseudocode (like 50+ lines) may end up with point deduction.
+   - <strong style='color:red'>Frequent invalid usage of the vocabulary could result in critically low points or 0.</strong>
 
-If you can only hit upon long pseudocode and cannot shorten it, please ask a question. Don't just submit that long pseudocode followed by a long email to seek an excuse.
+   - Functioning pseudocode can be about 30 lines or less. About 40 lines should be OK but it may be an indication that your pseudocode has redundant parts or some problem, e.g, you may be making something too complicated. **Excessively long pseudocode (like 50+ lines) may end up with point deduction.**
 
-Vocabulary list
-You can only use the following vocabulary to write your pseudocoe. Please make sure that you follow the syntax and DO NOT CREATE OR INTRODUCE YOUR OWN VOCABULARY.
+   - If you can only hit upon long pseudocode and cannot shorten it, please ask a question. **Don't just submit that long pseudocode followed by a long email to seek an excuse.**
+
+# Vocabulary list
+
+You can only use the following vocabulary to write your pseudocoe. Please make sure that you follow the syntax and <strong style="color:red">DO NOT CREATE OR INTRODUCE YOUR OWN VOCABULARY.</strong>
 
 The bold parts are place holders. Replace them with your variables and expressions.
 
-define variable_type called variable_name
+1. define **variable_type** called **variable_name**
 
-note: you can newly define ONLY these variable types:
+   note: you can newly define <strong style="color:red">ONLY</strong> these variable types:
 
-an int
-a pointer to record
-example:
+   - an int
+   - a pointer to record
 
-define an int called i
-define a pointer to record called temp
-allocate a heap space and store its address in variable
+   example:
+   ```
+   define an int called i
+   define a pointer to record called temp
+   ```
 
-note: variable must be a pointer to record. example:
+1. allocate a heap space and store its address in **variable**
 
-allocate a heap space and store its address into temp
-copy from expression to variable_name
+   note: **variable** must be a pointer to record.
+   example:
+   ```
+   allocate a heap space and store its address into temp
+   ```
 
-Note: the data type of expression must match that of variable_name
+1. copy from **expression** to **variable_name**
 
-If the variables are character arrays, you can assume you can directly copy the characters.
+   Note: the data type of **expression** must match that of **variable_name**
 
-example:
+   If the variables are character arrays, you can assume you can directly copy the characters.
 
-copy from temp1 to temp2
-copy from string1 to string2
-copy from i + 1 to i
-copy from 10 to i
-copy from NULL to temp
-field in the record whose address is in variable
+   example:
+   ```
+   copy from temp1 to temp2
+   copy from string1 to string2
+   copy from i + 1 to i
+   copy from 10 to i
+   copy from NULL to temp
+   ```
 
-In this way, you can access a field inside the record.
+1. **field** in the record whose address is in **variable**
 
-note1: field must be one of the fields in struct record.
-note2: variable must be a pointer to record.
-example:
+   In this way, you can access a field inside the record.
 
-copy from name in the record whose address is in temp to val
-copy from val to name in the record whose address is in temp
-BUT DON'T do this!:
+   - note1: **field** must be one of the fields in `struct record`.
+   - note2: **variable** must be a pointer to `record`.
 
-copy from val to name in the record whose address is in next in the record whose address is in temp
-Comparison
+   example:
+   ```
+   copy from name in the record whose address is in temp to val
+   copy from val to name in the record whose address is in temp
+   ```
 
-You can use the following comparisons for address values:
+   BUT <span style="color:red">DON'T do this!</span>:
+   ```
+   copy from val to name in the record whose address is in next in the record whose address is in temp
+   ```
 
-variable1 is equal to variable2
-variable1 is not equal to variable2
-In the case that you need to compare integers, you can use comparison symbols (==, <, >, <=, >=) or verbally express it.
+1. Comparison
 
-while( Comparison )
-note1: inside a while loop, put 4 white spaces for indents
-note2: you CANNOT use a break or continue statement.
-example:
+   You can use the following comparisons for address values:
 
-while ( accountno in the record whose address is in temp is equal to 0 )
-    ...
+   - **variable1** is equal to **variable2**
+   - **variable1** is not equal to **variable2**
 
-while ( accountno in the record whose address is in temp is not equal to 0 )
-    ...
-do-while( Comparison )
+   In the case that you need to compare integers,
+   you can use comparison symbols (`==`, `<`, `>`, `<=`, `>=`) or verbally express it.
 
-note1: inside a while loop, put 4 white spaces for indents
-note2: you CANNOT use a break or continue statement.
-example:
+   1. while( **Comparison** )
 
-do
-    ...
-while ( accountno in the record whose address is in temp is equal to 0 )
+   - note1: inside a while loop, put 4 white spaces for indents
+   - note2: you CANNOT use a break or continue statement.
 
-do
-    ...
-while ( accountno in the record whose address is in temp is not equal to 0 )
-if( Comparison )
+   example:
+   ```
+   while ( accountno in the record whose address is in temp is equal to 0 )
+       ...
 
-note1: inside an if statement, put 4 white spaces for indents
-node2: you can use "else".
-example:
+   while ( accountno in the record whose address is in temp is not equal to 0 )
+       ...
+   ```
 
-if ( var is not equal to 0 )
-    ...
-else if ( var2 is equal to 0 )
-    ...
-else
-    ...
-Combining comparison expressions
+1. do-while( **Comparison** )
 
-If necessary, you may use "&&" and "||" to combine comparisons
-example:
+   - note1: inside a while loop, put 4 white spaces for indents
+   - note2: you CANNOT use a break or continue statement.
 
-if ( var is not equal to 0 && var2 is equal to 0)
-    ...
-else if ( var is less than 0 || var2 is greater than 0)
-    ...
-return variable_name
+   example:
+   ```
+   do
+       ...
+   while ( accountno in the record whose address is in temp is equal to 0 )
 
-This exits the function with the value given by variable_name
+   do
+       ...
+   while ( accountno in the record whose address is in temp is not equal to 0 )
+   ```
 
-note 1: variable_name must be an integer variable
+1. if( **Comparison** )
 
-note 2: you can use this statement ONLY ONCE at the end.
+   - note1: inside an if statement, put 4 white spaces for indents
+   - node2: you can use "else".
 
-Template and Example
-Use this template of pseudocode. Please replace "* WRITE YOUR PSEUDOCODE HERE" with your pseudocode.
+   example:
+   ```
+   if ( var is not equal to 0 )
+       ...
+   else if ( var2 is equal to 0 )
+       ...
+   else
+       ...
+   ```
+
+1. Combining comparison expressions
+
+   - If necessary, you may use "&&" and "||" to combine comparisons
+
+   example:
+   ```
+   if ( var is not equal to 0 && var2 is equal to 0)
+       ...
+   else if ( var is less than 0 || var2 is greater than 0)
+       ...
+   ```
+
+1. return **variable_name**
+
+   This exits the function with the value given by **variable_name**
+
+   note 1: <strong>variable_name</strong> must be an integer variable
+
+   note 2: you can use this statement **ONLY ONCE** at the end.
+
+# Template and Example
+
+Use [this template of pseudocode](./pseudocode.txt).
+Please replace "<strong>* WRITE YOUR PSEUDOCODE HERE</strong>" with your pseudocode.
 
 This is sample pseudocode just demonstrating the vocabulary given above.
-
+```
 -----------------------------------
 sampleFunc
 ------------------------------------
@@ -192,59 +227,65 @@ if( start is not equal to NULL )
         copy from address in the record whose address is in start to address in the record whose address is in temp
 
         copy from next in the record whose address is in start to next in the record whose address is in temp
-Tracing
-After you are done, trace your pseudocode with the following test cases and fill in this file: trace.xlsx.
+```
 
-Note: You don't have to have exactly the same data in the example. Just make up your own data for each of the test cases.
+# Tracing
+After you are done, trace your pseudocode with the following test cases and fill in **this file: [trace.xlsx](./trace.xlsx)**.
 
-Adding a record to an empty list
+_Note: You don't have to have exactly the same data in the example. Just make up your own data for each of the test cases._
 
-For example,
+1. Adding a record to an empty list
 
-Record to add
-uaccountno: 1000
-uname: Ravi Narayan
-uaddress: 1680 East-West Rd.
-Heap: No record
-Adding a record to a list that has two records (every account number is different form others)
+   For example,
+   - Record to add
+      - `uaccountno`: 1000
+      - `uname`: Ravi Narayan
+      - `uaddress`: 1680 East-West Rd.
+   - Heap:
+      **No record**
 
-For example,
+2. Adding a record to a list that has two records (every account number is different form others)
 
-Record to add
-uaccountno: 1000
-uname: Ravi Narayan
-uaddress: 1680 East-West Rd.
-Heap:
-Record1:
-accountno: 1200
-name: Tetsuya Idota
-address: 1-1 Chiyoda
-Record2:
-accountno: 900
-name: David Lassner
-address: 2500 Campus Rd.
-Adding a record to a list which has two records (the second existing record has the same account number as that of the new record)
+   For example,
+   - Record to add
+      - `uaccountno`: 1000
+      - `uname`: Ravi Narayan
+      - `uaddress`: 1680 East-West Rd.
+   - Heap:
+      - Record1:
+         - `accountno`: 1200
+         - `name`: Tetsuya Idota
+         - `address`: 1-1 Chiyoda
+      - Record2:
+         - `accountno`: 900
+         - `name`: David Lassner
+         - `address`: 2500 Campus Rd.
 
-For example,
+3. Adding a record to a list which has two records (the second existing record has the same account number as that of the new record)
 
-Record to add
-uaccountno: 1000
-uname: Ravi Narayan
-uaddress: 1680 East-West Rd.
-Heap:
-Record1:
-accountno: 1100
-name: David Lassner
-address: 2500 Campus Rd.
-Record2:
-accountno: 1000
-name: Tetsuya Idota
-address: 1-1 Chiyoda
-Materials to submit
+   For example,
+   - Record to add
+      - `uaccountno`: 1000
+      - `uname`: Ravi Narayan
+      - `uaddress`: 1680 East-West Rd.
+   - Heap:
+      - Record1:
+         - `accountno`: 1100
+         - `name`: David Lassner
+         - `address`: 2500 Campus Rd.
+      - Record2:
+         - `accountno`: **1000**
+         - `name`: Tetsuya Idota
+         - `address`: 1-1 Chiyoda
+
+# Materials to submit
+
 Your submission must include the following:
 
-Pseudocode (pseudocode.txt) for the addRecord function described above.
-Again, please use this template: →pseudocode.txt←!!!!!!.
+1. Pseudocode (`pseudocode.txt`) for the `addRecord` function described above.
 
-Traces that verify the algorithm for the following test cases (trace.xlsx).
-Again, please use this template: →trace.xlsx←!!!!!!.
+  Again, **please use this template: →[pseudocode.txt](./pseudocode.txt)←!!!!!!**.
+
+1. Traces that verify the algorithm for the following test cases (`trace.xlsx`).
+
+  Again, **please use this template: →[trace.xlsx](./trace.xlsx)←!!!!!!**.
