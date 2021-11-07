@@ -1,0 +1,10 @@
+Script started on Sun 07 Nov 2021 11:38:59 AM HST
+]0;corylp@uhx02:~/homework7[?1034huhx02:/home/c/corylp/homework7% ./homework7 [Kmake
+gcc -ansi -pedantic-errors -Wall -c homework7.c
+gcc -o homework7 homework7.o
+]0;corylp@uhx02:~/homework7uhx02:/home/c/corylp/homework7% make./homework7 [8Pmake
+make: Nothing to be done for `all'.
+]0;corylp@uhx02:~/homework7uhx02:/home/c/corylp/homework7% exit
+exit
+
+Script done on Sun 07 Nov 2021 11:39:08 AM HST

@@ -1,0 +1,29 @@
+Script started on Sun 07 Nov 2021 11:39:19 AM HST
+]0;corylp@uhx02:~/homework7[?1034huhx02:/home/c/corylp/homework7% ls
+[0m[01;32mhomework7[0m  homework7.c  homework7.o  Makefile  output.txt  proof.txt  request1.bin  request2.bin  request3.bin  response1_expected.bin  response2_expected.bin  response3_expected.bin
+]0;corylp@uhx02:~/homework7uhx02:/home/c/corylp/homework7% lsexitmake./homework7 
+
+Source port: 29500
+Destination port: 40214
+Sequence number: 2645426175
+Acknowledgement number: 674827158
+Flags: ACK FIN 
+
+Source port: 47434
+Destination port: 11943
+Sequence number: 1929379839
+Acknowledgement number: 1668737226
+Flags: URG PSH SYN 
+
+Source port: 4282
+Destination port: 23031
+Sequence number: 1002832280
+Acknowledgement number: 586034558
+Flags: SYN FIN 
+]0;corylp@uhx02:~/homework7uhx02:/home/c/corylp/homework7% ls
+[0m[01;32mhomework7[0m    homework7.o  output.txt  request1.bin  request3.bin   response1_expected.bin  response2_expected.bin  response3_expected.bin
+homework7.c  Makefile     proof.txt   request2.bin  response1.bin  response2.bin           response3.bin
+]0;corylp@uhx02:~/homework7uhx02:/home/c/corylp/homework7% exit
+exit
+
+Script done on Sun 07 Nov 2021 11:39:43 AM HST
