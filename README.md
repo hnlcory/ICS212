@@ -13,4 +13,5 @@ g++ -ansi -pedantic-errors -Wall -c <your source file>
 g++ -o <executable> <your object file(s)>
 
 script output.txt
+xxd test1.bin  
 exit
