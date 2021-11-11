@@ -16,3 +16,6 @@ g++ -o <executable> <your object file(s)>
 xxd test1.bin    
 script output.txt 
 exit
+
+  C passes by value
+  C++ passes by reference  
