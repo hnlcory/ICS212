@@ -1,0 +1,7 @@
+Script started on Wed 10 Nov 2021 08:56:22 PM HST
+]0;corylp@uhx02:~/homework8[?1034huhx02:/home/c/corylp/homework8% ./homework8 [5@vi homework8.cpp[C[33@g++ -ansi -pedantic-errors -Wall -c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./homework8 [K[38@g++ -ansi -pedantic-errors -Wall -c homework8.cpp[C
+]0;corylp@uhx02:~/homework8uhx02:/home/c/corylp/homework8% g++ -ansi -pedantic-errors -Wall -c homework8.cpp [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./homework8 [K[5@vi homework8.cpp[C[33@g++ -ansi -pedantic-errors -Wall -c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./homework8 [Kg++ -o homework8 homework8.o
+]0;corylp@uhx02:~/homework8uhx02:/home/c/corylp/homework8% exit
+exit
+
+Script done on Wed 10 Nov 2021 08:56:39 PM HST

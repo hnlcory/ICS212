@@ -1,0 +1,27 @@
+Script started on Wed 10 Nov 2021 09:08:03 PM HST
+]0;corylp@uhx02:~/homework8[?1034huhx02:/home/c/corylp/homework8% ../[K[K/homework8 
+This is a simple program to generate s table of numbers from 0 to
+the maximum number given. It will also show if it is a multiple of 3
+Enter a max number:
+abcdefg1
+error, please enter valid input
+Enter a max number:
+12
+Number  Multiple of 3?
+    0   Yes
+    1    No
+    2    No
+    3   Yes
+    4    No
+    5    No
+    6   Yes
+    7    No
+    8    No
+    9   Yes
+   10    No
+   11    No
+   12   Yes
+]0;corylp@uhx02:~/homework8uhx02:/home/c/corylp/homework8% exit
+exit
+
+Script done on Wed 10 Nov 2021 09:08:30 PM HST
