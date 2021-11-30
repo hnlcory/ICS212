@@ -1,0 +1,362 @@
+Script started on Thu 25 Nov 2021 09:57:40 AM HST
+]0;corylp@uhx02:~/project2[?1034huhx02:/home/c/corylp/project2% ./project_debug 
+
+-Default Constructor Called-
+
+-readfile Called-
+
+-addRecord Called-
+-account# to add: 201 -
+-name to add: May -
+-address to add: Hawaii
+Oahu -
+
+-addRecord Called-
+-account# to add: 125 -
+-name to add: Test Name -
+-address to add: Example Street
+Hawaii
+Oahu -
+
+-addRecord Called-
+-account# to add: 100 -
+-name to add: Cory -
+-address to add: Beach Street
+Hawaii -
+
+-addRecord Called-
+-account# to add: 73 -
+-name to add: Tetsuya -
+-address to add: Dole Street
+Hawaii 96000 -
+
+-addRecord Called-
+-account# to add: 47 -
+-name to add: Eric -
+-address to add: Oahu Hawaii -
+
+-- DEBUG BUILD --
+
+-MainFunction Called-
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+fin
+-User Menu Choice: fin-
+
+-Main Function Called-
+
+Enter account number: 
+125
+
+-findRecord Called-
+-account to find: 125 -
+
+-- Record Found--
+Account #: 125
+Account Name: Test Name
+Account Address: Example Street
+Hawaii
+Oahu
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+pppppppp
+-User Menu Choice: pppppppp-
+
+--- Invalid Input, Try Again ---
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+pri 
+-User Menu Choice: pr-
+
+-printAllRecords Called-
+
+Account #: 201
+Account Name: May
+Account Address: Hawaii
+Oahu
+
+Account #: 125
+Account Name: Test Name
+Account Address: Example Street
+Hawaii
+Oahu
+
+Account #: 100
+Account Name: Cory
+Account Address: Beach Street
+Hawaii
+
+Account #: 73
+Account Name: Tetsuya
+Account Address: Dole Street
+Hawaii 96000
+
+Account #: 47
+Account Name: Eric
+Account Address: Oahu Hawaii
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+qu
+-User Menu Choice: qu-
+
+-deconstructor Called-
+
+-writefile Called-
+
+-Cleanup Called-
+]0;corylp@uhx02:~/project2uhx02:/home/c/corylp/project2% ./project
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+pr
+
+Account #: 201
+Account Name: May
+Account Address: Hawaii
+Oahu
+
+Account #: 125
+Account Name: Test Name
+Account Address: Example Street
+Hawaii
+Oahu
+
+Account #: 100
+Account Name: Cory
+Account Address: Beach Street
+Hawaii
+
+Account #: 73
+Account Name: Tetsuya
+Account Address: Dole Street
+Hawaii 96000
+
+Account #: 47
+Account Name: Eric
+Account Address: Oahu Hawaii
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+ppp   adddd
+
+--- Invalid Input, Try Again ---
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+a
+
+Enter account number: 
+10
+
+Enter name: 
+Nab me B
+
+Enter address followed by # when done:
+
+Example Address 2
+Place 2#
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+find
+
+Enter account number: 
+-1
+-- Error, please enter valid account number --
+Enter account number: 
+ 10
+
+-- Record Found--
+Account #: 10
+Account Name: Name B
+Account Address: Example Address 2
+Place 2
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+pr
+
+Account #: 201
+Account Name: May
+Account Address: Hawaii
+Oahu
+
+Account #: 125
+Account Name: Test Name
+Account Address: Example Street
+Hawaii
+Oahu
+
+Account #: 100
+Account Name: Cory
+Account Address: Beach Street
+Hawaii
+
+Account #: 73
+Account Name: Tetsuya
+Account Address: Dole Street
+Hawaii 96000
+
+Account #: 47
+Account Name: Eric
+Account Address: Oahu Hawaii
+
+Account #: 10
+Account Name: Name B
+Account Address: Example Address 2
+Place 2
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+del
+
+Enter account number: 
+125
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+p
+
+Account #: 201
+Account Name: May
+Account Address: Hawaii
+Oahu
+
+Account #: 100
+Account Name: Cory
+Account Address: Beach Street
+Hawaii
+
+Account #: 73
+Account Name: Tetsuya
+Account Address: Dole Street
+Hawaii 96000
+
+Account #: 47
+Account Name: Eric
+Account Address: Oahu Hawaii
+
+Account #: 10
+Account Name: Name B
+Account Address: Example Address 2
+Place 2
+
+-  Parker Banking -
+
+Please type the name of the option you
+would like to access:
+
+add: Add a new record in the database
+printall: Print all records in the database
+find: Find record(s) with a specified account #
+delete: Delete existing record(s) from the database using the account # as a key
+quit: Quit the program
+
+q
+]0;corylp@uhx02:~/project2uhx02:/home/c/corylp/project2% exit
+exit
+
+Script done on Thu 25 Nov 2021 09:59:49 AM HST

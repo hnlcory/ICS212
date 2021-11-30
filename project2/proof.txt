@@ -1,0 +1,15 @@
+Script started on Thu 25 Nov 2021 09:52:39 AM HST
+]0;corylp@uhx02:~/project2[?1034huhx02:/home/c/corylp/project2% ./project_debug [Kmake -frelease.mak[3Pvi release.mak [2Pdebug[C[C[C[C[Cls[Kmake -fdebug.mak
+g++ -ansi -pedantic-errors -Wall -c -DDEBUGMODE user-interface.cpp
+g++ -ansi -pedantic-errors -Wall -c -DDEBUGMODE llist.cpp
+g++ -o project_debug user-interface.o llist.o
+rm -f *.o
+]0;corylp@uhx02:~/project2uhx02:/home/c/corylp/project2% make -fdebug.mak./project_debug [Kmake -frelease.mak
+g++ -ansi -pedantic-errors -Wall -c user-interface.cpp
+g++ -ansi -pedantic-errors -Wall -c llist.cpp
+g++ -o project user-interface.o llist.o
+rm -f *.o
+]0;corylp@uhx02:~/project2uhx02:/home/c/corylp/project2% exit
+exit
+
+Script done on Thu 25 Nov 2021 09:53:00 AM HST

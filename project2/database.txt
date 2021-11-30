@@ -1,0 +1,19 @@
+201
+May
+Hawaii
+Oahu#
+100
+Cory
+Beach Street
+Hawaii#
+73
+Tetsuya
+Dole Street
+Hawaii 96000#
+47
+Eric
+Oahu Hawaii#
+10
+Name B
+Example Address 2
+Place 2#
