@@ -1,0 +1,12 @@
+Script started on Fri 03 Dec 2021 11:20:19 PM HST
+]0;corylp@uhx02:~/homework9[?1034huhx02:/home/c/corylp/homework9% make
+g++ -ansi -pedantic-errors -Wall -c main.cpp
+g++ -ansi -pedantic-errors -Wall -c pokemon.cpp
+g++ -ansi -pedantic-errors -Wall -c lickitung.cpp
+g++    -c -o sunkern.o sunkern.cpp
+g++ -ansi -pedantic-errors -Wall -c unown.cpp
+g++ -o homework9 main.o pokemon.o lickitung.o sunkern.o unown.o
+]0;corylp@uhx02:~/homework9uhx02:/home/c/corylp/homework9% exit
+exit
+
+Script done on Fri 03 Dec 2021 11:20:28 PM HST

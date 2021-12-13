@@ -1,0 +1,42 @@
+Script started on Fri 03 Dec 2021 11:21:09 PM HST
+]0;corylp@uhx02:~/homework9[?1034huhx02:/home/c/corylp/homework9% ./homework9 
+
+Pokemon Constructor
+
+Lickitung Constructor
+
+Pokemon Constructor
+
+Sunkern Constructor
+
+Pokemon Constructor
+
+Unown Constructor
+
+Name: Lickitung
+Weight: 144.4
+Type: Normal
+
+Name: Unown
+Weight: 11
+Type: Psychic
+
+Name: Sunkern
+Weight: 4
+Type: Grass
+
+Lickitung Destructor
+
+Pokemon Destructor
+
+Sunkern Destructor
+
+Pokemon Destructor
+
+Unown Destructor
+
+Pokemon Destructor
+]0;corylp@uhx02:~/homework9uhx02:/home/c/corylp/homework9% ./homework9 [8Pexit./homework9 [Kexit
+exit
+
+Script done on Fri 03 Dec 2021 11:21:52 PM HST
